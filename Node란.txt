@@ -1,0 +1,108 @@
+Node js는 JacaScript를 실행하기 위한 서버 사이드 플랫폼이다. Node js는 npm을 통해 수많은 라이브러리와 패키지를 제공한다.
+
+npm: node package manage
+
+Node js와 Express모듈 설치하기
+
+Express모듈: Node js를 이용해서 웹 프레임워크를 만드는 것(node 모듈이다)
+ 
+웹 프레임워크: 프론트엔드에서 백엔드에 요청 백엔드에서 계산하고 처리해서 DB조회하고 응답으로 돌려주는 기능을 하는 것을 웹 프레임워크라 한다.
+
+
+==================================================
+<node 시작>
+
+npm init (package.json 생성)
+
+express모듈 설치하기: `npm install express` 
+index.js파일 실행하기: `node index.js` 
+
+
+`npm init`: 다운받은 모듈이 package.json에 기록된다.
+package-lock.json에는 더 자세하게 기록된다.
+node_modules폴더에는 설치한 모듈들이 기록된다.
+
+
+npm(node package manager) 사이트에서 다양한 module 검색 후 사용가능 (설치 코드와 예제 코드 등 다양한 정보를 얻을 수 있다.)
+
+
+
+
+==================================================
+node 실행하고자 하는 파일 : ex) node index.js
+
+express모듈 사용해 node로 서버를 만들기
+
+npm install express
+
+
+웹 서버 구현해보기 -> 데이터베이스 연결해보기(mysql(mariaDB))사용
+
+npm install mysql
+
+
+로그로 시스템을 운영하면서 일어나는 모든 데이터를 관리한다.
+
+로그 관리하기 
+
+
+api서버 구축하기 
+
+postman : 서버 api 테스트 도구
+백엔드에서만 테스트 : postman으로 진행(또는 swagger)
+
+프론트에서 최종적으로 테스트할 때는 서버를 배포한 후에 해당 서버로 요청을 보내 테스트 진행
+==================================================
+
+
+
+
+
+API: Application Programming Interface의 약자, Frontend(화면)과 Backend(데이터처리)와 통신 과정(Frontend에서의 정보요청-Request, Backend에서의 정보처리 결과전달-Response)구조로 통신한다. 이러한 규칙을 API라고 한다. 
+
+
+
+port
+
+
+HTTP메소드 
+요청(Request) 전송방식: Get, Post
+Get 주소창에 검색어를 넣어서 보내는 것
+Post 주소창이 아니라 안보이는 곳에 넣어서 보내는 것
+
+
+응답(Response) 
+자료형식: JSON(JavaScript Object Notation), 키와 값으로 구성되어있다. 
+
+
+listen은 항상 하고있다.
+
+
+axios는 받아오는 기능을 하는 라이브러리(요청)
+
+
+
+
+
+CORS : html파일에서 서버로 요청이 올 때 차단이 되는 것을 막는다.
+방법: npm install cors를 통해 install
+
+
+
+현재까지 진행한 것: Frontend HTML과 Backend API를 만들어서 두개를 연결.
+다음에 진행할 것: Deploy(배포)해서 서버에 올린다음에 (Backend 서버에 올리는 과정)
+
+
+
+React Deploy(배포)
+`npm run build` 하면 build파일이 생성된다.
+생성된 build 파일 내에 생성된 index.html이 배포할 파일
+
+`npm install -g serve` 컴퓨터 어디에서든 serve라는 명령어를 통해서 웹서버를 설치할 수 있다
+`npx serve` 한번만 실행시키는 웹서버
+`npx serve -s build` build디렉토리를 document root로 하겠다. 
+
+
+
+
+
